@@ -1,0 +1,6 @@
+{
+    "app.header" : "Izveidot<code>{fileName}</code> js un saglabat" ,
+    "app.content" : "Izmanto React" ,
+    "app.channel.plug": "Tutorials pirkts {blogName}",
+    "app.plural": "{amount, plural, =0 {no languages} one {# one language} few {# several languages} many {# lots of languages} other {# wrong fromat}}"
+  }

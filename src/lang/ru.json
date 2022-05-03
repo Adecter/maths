@@ -1,0 +1,6 @@
+{
+    "app.header" : "Редактирован <code>{fileName}</code> js и сохранен" ,
+    "app.content" : "Изучи React" ,
+    "app.channel.plug": "туториал можешь купить {blogName}",
+    "app.plural": "{amount, plural, =0 {no languages} one {# one language} few {# several languages} many {# lots of languages} other {# wrong fromat}}"
+  }

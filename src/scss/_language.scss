@@ -1,0 +1,15 @@
+.Language__content{
+
+    button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-family: var(--body-font);
+        font-size: var(--h2-font-size);
+        color: var(--third-color);
+        font-weight: var(--font-semibold);
+        
+        background: none;
+        margin-left: 10px;
+      }
+}

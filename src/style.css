@@ -1,0 +1,182 @@
+@import 'https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+:root {
+  --header-height: 3.5rem;
+  /*========== Colors ==========*/
+  --body-color: #E5E5E5;
+  --first-color: #07122A;
+  --second-color: #F5F5F7;
+  --third-color: #ffffff;
+  --color-red: #ec1840;
+  --color-purple: #7a18ec;
+  --color-white: #fff;
+  --color-black-1: #111;
+  --color-black-2: #222;
+  --color-black-3: #444;
+  --speed-normal: 0.5s;
+  --speed-fast: 0.8s;
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Roboto", sans-serif;
+  --biggest-font-size: 1.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --tiny-font-size: .625rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semibold: 600;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+/*=============== BASE ===============*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  /* for light mode animation */
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semibold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  /* border-radius: ; */
+}
+
+.container {
+  max-width: 968px;
+  margin: 0 auto;
+}
+
+.Language__content button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: var(--body-font);
+  font-size: var(--h2-font-size);
+  color: var(--third-color);
+  font-weight: var(--font-semibold);
+  background: none;
+  margin-left: 10px;
+}
+
+.home__button {
+  margin: 50px 0;
+}
+.home__button a {
+  position: relative;
+  padding: 20px;
+  width: 180px;
+  height: 60px;
+  margin: 20px;
+  line-height: 60px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-white);
+  -webkit-transition: var(--speed-normal);
+  transition: var(--speed-normal);
+  border: 1px solid var(--color-red);
+}
+.home__button a:hover {
+  border: 1px solid transparent;
+  background: var(--color-red) url(https://i.postimg.cc/wBXGXbWN/pixel.png);
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+  background-size: 180px;
+  -webkit-animation: animate var(--speed-fast) steps(8) forwards;
+          animation: animate var(--speed-fast) steps(8) forwards;
+}
+@-webkit-keyframes animate {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -480px;
+  }
+}
+@keyframes animate {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -480px;
+  }
+}
+.home__list {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.home__video {
+  margin: 0 auto;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1/1/span 2/span 2;
+}
+.home__video video {
+  width: 600px;
+}
+
+.about {
+  padding-top: 150px;
+}
